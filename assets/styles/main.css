@@ -194,3 +194,104 @@ body {
 .share-button.active:hover::before {
     background-color: var(--color-grey-500);
 }
+
+
+
+@media (min-width: 768px) {
+
+    .card-footer {
+        position: relative; 
+        background-color: transparent !important; 
+        overflow: visible; 
+    }
+
+
+    .card-footer.show-share .author-info {
+        display: flex !important;
+    }
+
+    
+    .share-popup {
+        
+        position: absolute;
+        
+        bottom: 90px;  
+        right: -77px;  
+        
+        
+        background-color: var(--color-grey-900);
+        border-radius: 10px;
+        padding: 18px 40px;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        z-index: 100;
+        
+   
+        width: auto; 
+        display: none; 
+        gap: 1rem;
+    }
+
+    .share-popup.active {
+        display: flex !important;
+        animation: popUp 0.2s ease-out;
+    }
+
+    
+    .share-popup::after {
+        content: "";
+        position: absolute;
+        
+        
+        top: 100%; 
+        left: 50%; 
+        margin-left: -10px; 
+        
+        border-width: 10px;
+        border-style: solid;
+        border-color: var(--color-grey-900) transparent transparent transparent;
+    }
+    
+    .card-footer.show-share .share-button {
+        background-color: var(--color-grey-500);
+        color: white;
+    }
+    
+    @keyframes popUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 20rem 30rem;
+        grid-template-rows: 20rem 6.5rem;
+        grid-template-areas:
+             "image text"
+             "image footer";
+        max-width: 50rem;
+    }
+    
+    .card-content {
+        grid-area: text;
+    }
+
+    .card-img {
+        grid-area: image;
+        object-fit: cover;
+        object-position: center;  
+        height: 100%;
+        border-radius: 1.25rem 0 0 1.25rem;
+    }
+
+    .card-footer {
+        grid-area: footer;
+        
+    }
+}
+
+@media (min-width: 1024px) {
+    .card{
+        grid-template-columns: 30rem 30rem;
+        max-width: 60rem;
+    }
+}
