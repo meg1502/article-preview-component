@@ -1,0 +1,65 @@
+* { box-sizing: border-box; }
+img { max-width: 100%; height: auto; }
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --color-white: #ffffff;
+    --color-grey-900: #48556a;
+    --color-grey-500: #6e8098;
+    --color-grey-400: #9daec2;
+    --color-grey-200: #ecf2f8;
+    --spacing-200: 1rem;
+    --spacing-300: 1.5rem;
+    --spacing-400: 2rem;
+    --spacing-500: 2.5rem;
+    --spacing-600: 3rem;
+    --spacing-700: 3.5rem;
+    --spacing-800: 4rem;
+    --spacing-1300: 6.5rem;
+    --spacing-2000: 10rem;
+    --font-manrope: "Manrope", sans-serif;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fs-100: 0.8125rem;
+    --fs-200: 1.25rem;
+}
+
+.share-popup {
+    display: none;
+}
+
+
+body {
+    font-family: var(--font-manrope);
+    color: var(--color-grey-500);
+}
+
+.text-preset-1 {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-200);     
+    line-height: 1.3;              
+    letter-spacing: 0.25rem;
+}
+
+
+.text-preset-2 {
+    font-size: var(--fs-100);     
+    line-height: 1.4;
+    letter-spacing: 0.0012rem;              
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.fw-medium {
+    font-weight: var(--fw-medium);
+}
+
+.text-preset-3 {
+    font-size: var(--fs-100);      
+    line-height: 1.4;              
+    letter-spacing: 0.25rem;          
+    text-transform: uppercase;     
+}
