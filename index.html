@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/styles/main.css">
   <title>Frontend Mentor | Article preview component</title>
@@ -11,8 +10,8 @@
 </head>
 <body>
   <main class="card">
-
     <img class="card-img" alt="furniture with drawers" src="./assets/images/drawers.jpg">
+    
     <div class="card-content">
       <h1 class="card-title text-preset-1">
         Shift the overall look and feel by adding these wonderful 
@@ -23,21 +22,25 @@
         it felt slightly bare and uninviting. I’ve got some simple tips 
         to help you make any room feel complete.
       </p>
-      <div class="card-footer">
-        <div class="author-info">
-          <img alt="Michelle Appleton" src="./assets/images/avatar-michelle.jpg">
-          <div class="author-text">
-            <h3 class="name text-preset-2 fw-bold">Michelle Appleton</h3>
-            <time class="date text-preset-2 fw-medium" datetime="2020-06-28">28 Jun 2020</time>
-          </div>
-        </div>
-        <img alt="share" src="./assets/images/icon-share.svg">
-        <div class="share-popup">
-          <img alt="share on facebook" src="./assets/images/icon-facebook.svg">
-          <img alt="share on twitter" src="./assets/images/icon-twitter.svg">
-          <img alt="share on pinterest" src="./assets/images/icon-pinterest.svg">
+    </div>
+
+    <div id="card-footer" class="card-footer">
+      <div id="author-info" class="author-info active">
+        <img class="author-img" alt="Michelle Appleton" src="./assets/images/avatar-michelle.jpg">
+        <div class="author-text">
+          <h3 class="name text-preset-2 fw-bold">Michelle Appleton</h3>
+          <time class="date text-preset-2 fw-medium" datetime="2020-06-28">28 Jun 2020</time>
         </div>
       </div>
+
+      <div id="share-popup" class="share-popup">
+        <span class="share-text text-preset-3">SHARE</span>
+        <button class="share-icon share-facebook"></button>
+        <button class="share-icon share-twitter"></button>
+        <button class="share-icon share-pinterest"></button>
+      </div>
+
+      <button id="share-button" class="share-button"></button>
     </div>
   </main>
 </body>

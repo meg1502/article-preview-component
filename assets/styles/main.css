@@ -3,8 +3,6 @@
 * { box-sizing: border-box; margin: 0; }
 img { max-width: 100%; height: auto; }
 
-
-
 :root {
     --color-white: #ffffff;
     --color-grey-900: #48556a;
@@ -16,9 +14,7 @@ img { max-width: 100%; height: auto; }
     --spacing-400: 2rem;
     --spacing-500: 2.5rem;
     --spacing-600: 3rem;
-    --spacing-700: 3.5rem;
     --spacing-800: 4rem;
-    --spacing-1300: 6.5rem;
     --spacing-2000: 10rem;
     --font-manrope: "Manrope", sans-serif;
     --fw-medium: 500;
@@ -26,7 +22,6 @@ img { max-width: 100%; height: auto; }
     --fs-100: 0.8125rem;
     --fs-200: 1.25rem;
 }
-
 
 body {
     font-family: var(--font-manrope);
@@ -45,20 +40,14 @@ body {
     letter-spacing: 0.25px;
 }
 
-
 .text-preset-2 {
     font-size: var(--fs-100);     
     line-height: 1.4;
     letter-spacing: 0.0012rem;              
 }
 
-.fw-bold {
-    font-weight: var(--fw-bold);
-}
-
-.fw-medium {
-    font-weight: var(--fw-medium);
-}
+.fw-bold { font-weight: var(--fw-bold); }
+.fw-medium { font-weight: var(--fw-medium); }
 
 .text-preset-3 {
     font-size: var(--fs-100);      
@@ -71,32 +60,137 @@ body {
     margin: var(--spacing-400);
     background-color: var(--color-white);
     border-radius: 1.25rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    max-width: 400px; 
 }
 
 .card-img {
     border-radius: 1.25rem 1.25rem 0 0;
-    margin-bottom: var(--spacing-400);
+    width: 100%;
+    display: block;
 }
 
 .card-content {
-    padding: 0 var(--spacing-400) var(--spacing-200) var(--spacing-400);
+    padding: var(--spacing-400);
+    padding-bottom: var(--spacing-200);
 }
 
 .card-title {
     margin: 0;
-    margin-bottom: var(--spacing-600);
+    margin-bottom: var(--spacing-300);
     color: var(--color-grey-900);
 }
-.card-text {
-    margin: 0;
-}
+
+.card-text { margin: 0; }
 
 .card-footer {
-    margin-top: var(--spacing-600);
+    padding: var(--spacing-400); 
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-white);
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    height: 6.5rem;
 }
+
+.card-footer.show-share {
+    background-color: var(--color-grey-900);
+}
+
+.author-info {
+    display: none;
+    align-items: center;
+}
+
+.author-info.active { display: flex; }
+
+.author-img {
+    border-radius: 50%;
+    width: var(--spacing-500);
+    height: var(--spacing-500);
+}
+
+.author-text {
+    padding-left: var(--spacing-200);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.name { color: var(--color-grey-900); }
+.date { color: var(--color-grey-400); }
 
 .share-popup {
     display: none;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.share-popup.active { display: flex; }
+
+.share-text { color: var(--color-grey-400); }
+
+.share-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.share-facebook { background-image: url(../images/icon-facebook.svg); }
+.share-twitter { background-image: url(../images/icon-twitter.svg); }
+.share-pinterest { background-image: url(../images/icon-pinterest.svg); }
+
+.share-button {
+    position: relative;
+    width: var(--spacing-400);
+    height: var(--spacing-400);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-grey-200);
+    transition: background-color 0.2s ease;
+    z-index: 10; 
+}
+
+.share-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--color-grey-500);
+    -webkit-mask-image: url(../images/icon-share.svg);
+    mask-image: url(../images/icon-share.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    transition: background-color 0.2s ease;
+}
+
+.share-button:hover, 
+.share-button.active {
+    background-color: var(--color-grey-500);
+}
+
+.share-button:hover::before, 
+.share-button.active::before {
+    background-color: var(--color-white);
+}
+
+ 
+.share-button.active:hover {
+    background-color: var(--color-grey-200);
+}
+
+.share-button.active:hover::before {
+    background-color: var(--color-grey-500);
 }
