@@ -6,6 +6,8 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -19,6 +21,14 @@ Users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
 - See the social media share links when they click the share icon
+
+### Screenshot
+
+![](https://github.com/user-attachments/assets/378a86cc-fde5-473a-8721-b8b1aedded5e)
+
+### Links
+
+- Live Site URL: [https://article-preview-component-mu-ten.vercel.app/](https://article-preview-component-mu-ten.vercel.app/)
 
 ## My process
 
@@ -50,4 +60,4 @@ This ensures that all necessary classes are toggled to control the visibility an
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@meg1502](https://www.frontendmentor.io/profile/meg1502)
